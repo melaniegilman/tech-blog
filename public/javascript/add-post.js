@@ -16,6 +16,7 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
+      alert("Your post was added to the homepage!");
       document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
