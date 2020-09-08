@@ -37,7 +37,7 @@ Post.init(
         autoIncrement: true
       },
       title: {
-        type: DataTypes.TEXT('long'),
+        type: DataTypes.TEXT,
         allowNull: false
       },
       post_text: {

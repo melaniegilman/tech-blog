@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Vote, Comment } = require('../../models'); // these create the express endpoints
 // we want to pull information from Post as well as User, and Vote
 const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -79,14 +80,19 @@ router.get('/:id', (req, res) => {
 });
 
 // create a post route
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     // expects json info back
     Post.create({
         title: req.body.title,
         post_text: req.body.post_text,
         user_id: req.session.user_id
       })
-})
+      .then(dbPostData => res.json(dbPostData))
+      .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+      });
+});
 
 //upvote
 router.put('/upvote', (req, res) => {
