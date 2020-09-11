@@ -24,8 +24,9 @@
 </form>
 {{/if}}
 
-{{!-- <div class="comments"> --}}{{> comments post.comments}}
-  {{#each post.comments}}
+{{!-- <div class="comments"> --}}
+  {{> comments post.comments}}
+  {{!-- {{#each post.comments}}
   <section class="comment">
     <div class="meta">
       {{user.username}} on {{format_date created_at}}
@@ -34,8 +35,8 @@
       {{comment_text}}
     </div>
   </section>
-  {{/each}}
-</div>
+  {{/each}} --}}
+{{!-- </div> --}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
