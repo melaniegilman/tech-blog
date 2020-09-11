@@ -137,6 +137,7 @@ router.put('/:id', (req, res) => {
 
 // create delete/destroy route
 router.delete('/:id', withAuth, (req, res) => {
+    alert("Your post was deleted");
     console.log("delete this post", req.body)
     Post.destroy({
         where: {
