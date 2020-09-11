@@ -1,6 +1,6 @@
 async function editFormHandler(event) {
   event.preventDefault();
-
+console.log("this is where we are");
   const post_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
   ];
@@ -10,12 +10,12 @@ async function editFormHandler(event) {
   // const title = document.querySelector('input[name="post-title"]').value;
   // const post_url = document.querySelector('textarea[name="post-content"]').value;
 
-  // const title = document.querySelector('input[name="question-title"]').value.trim();
+  const title = document.querySelector('input[name="post-title"]').value.trim();
   const post_text = document.querySelector('textarea[name="post-content"]').value.trim();
-  const response = await fetch(`/api/questions/${post_id}`, {
+  const response = await fetch(`/api/posts/${post_id}`, {
       method: 'PUT',
       body: JSON.stringify({
-          // title,
+          title,
           post_text
       }),
       headers: {
