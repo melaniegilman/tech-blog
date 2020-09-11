@@ -1,7 +1,7 @@
-const User = require("./user");
+const User = require("./User");
 const Post = require("./Post");
 const Vote = require('./Vote');
-const Comment = require('./comment');
+const Comment = require('./Comment');
 
 User.belongsToMany(Post, {
     through: Vote,
