@@ -81,6 +81,7 @@ router.get('/:id', (req, res) => {
 
 // create a post route
 router.post('/', withAuth, (req, res) => {
+    console.log(req.body);
     // expects json info back
     Post.create({
         title: req.body.title,

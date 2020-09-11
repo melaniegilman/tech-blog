@@ -26,6 +26,7 @@ class Post extends Model {
       });
     }
   }
+  
 
 // create fields/columns for Post model
 Post.init(
@@ -37,11 +38,11 @@ Post.init(
         autoIncrement: true
       },
       title: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false
       },
       post_text: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
         allowNull: false,
         validate: {
           notEmpty: true
