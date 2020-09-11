@@ -1,8 +1,7 @@
-// function to log out users after being idle for 1 min
 let currSeconds = 0;    
 let timer = setInterval(myTimer, 1000);
 
-// rests currSeconds to 0
+// sets currSeconds back to 0
 function resetTimer() {
     currSeconds = 0;
 };
@@ -25,7 +24,7 @@ async function myTimer() {
         };
     };
 };
-// Define the events that would reset the timer 
+// Declare the events that would reset the timer 
 window.onload = resetTimer; 
 window.onmousemove = resetTimer; 
 window.onmousedown = resetTimer; 
