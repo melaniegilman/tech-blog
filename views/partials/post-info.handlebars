@@ -6,10 +6,11 @@
   <div>
     <p>{{post_text}}</p>
   </div>
-  {{!-- <div class="meta">
+  <div class="meta">
     By {{user.username}} on
-    {{created_at}}
+    {{format_date created_at}}
     |
     Comment(s): {{comments.length}}
-  </div> --}}
+  </div>
 </article>
+
