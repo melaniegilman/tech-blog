@@ -134,11 +134,16 @@ router.put('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
 // create delete/destroy route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
+    console.log("delete this post", req.body)
     Post.destroy({
         where: {
-            id: req.params.id
+            id: req.params.id,
+            user_id: req.session.user_id
+
+            
         }
     })
         .then(dbPostData => {
@@ -152,5 +157,6 @@ router.delete('/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+
 });
 module.exports = router; // this exposes the changes/code to the express server. Keep this at the bottom of the file
