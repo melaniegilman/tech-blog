@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Vote, Comment } = require('../../models/index2'); // these create the express endpoints
+const { Post, User, Vote, Comment } = require('../../models'); // these create the express endpoints
 // we want to pull information from Post as well as User, and Vote
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
