@@ -20,7 +20,6 @@ async function commentFormHandler(event) {
         });
       
         if (response.ok) {
-          alert("Your comment was added!");
           document.location.reload();
         } else {
           alert(response.statusText);

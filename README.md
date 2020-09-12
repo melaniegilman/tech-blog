@@ -1,4 +1,4 @@
-# Tech Blog
+# The Tech Blog
 
 ## User Story
 AS A developer who writes about tech
@@ -43,4 +43,18 @@ THEN I am automatically signed out of the site
 ## You will need
 express-handlebars , Mysql2 Sequelize , dotenv package , bcrypt package , express-session , connect-session-sequelize
 
+## Description 
+This is a blog where people with the common interest of tech can come together and post their thoughts, questions, musings, etc.  Other users are able to comment on the posts.  Users will sign up for this application, and moving forward will be able to log in and log out.  The site will automatically log a user out if they are idle for 5 minutes or more.  Users may like a post made by someone else amd also edit and delete their own posts.  
+
+## Built With
+* HTML
+* Javascript
+* CSS
+* Handlebars
+* Node
+* Sequelize
+* Heroku
+
+## Contributions 
+Melanie Gilman https://github.com/melaniegilman
 

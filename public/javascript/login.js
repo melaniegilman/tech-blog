@@ -17,8 +17,7 @@ async function signupFormHandler(event) {
         });
         // check the response status
         if (response.ok) {
-            alert("Your'e signed up! Login now!");
-            console.log('success');
+            window.location.replace('/');
         } else {
             alert(response.statusText);
         }
