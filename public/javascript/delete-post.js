@@ -9,6 +9,8 @@ async function deleteFormHandler(event) {
     await fetch(`/api/posts/${post_id}`, {
         method: 'DELETE'
       });  
+      alert("Your post was deleted!");
+      window.location.replace('/');
   }
   
   document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
